@@ -1,0 +1,16 @@
+PODS:
+  - EnvoyMobile (0.2.3.03022020)
+
+DEPENDENCIES:
+  - EnvoyMobile
+
+SPEC REPOS:
+  trunk:
+    - EnvoyMobile
+
+SPEC CHECKSUMS:
+  EnvoyMobile: 9f06d1575a4ad236a410af98b5cfdb86e78ef6c9
+
+PODFILE CHECKSUM: a19d2db3b82393eadc050fe1a3e115f2ff4e891d
+
+COCOAPODS: 1.9.0
