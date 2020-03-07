@@ -1,0 +1,6 @@
+*xcschememanagement.plist
+*.xcuserstate
+*.xcworkspace
+*.xcworkspacedata
+
+AnalysisVariant/Pods
