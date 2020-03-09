@@ -26,7 +26,9 @@ final class ViewController: UIViewController {
 
     private func startRequests() {
         self.timer = .scheduledTimer(withTimeInterval: 0.2, repeats: true) { [weak self] _ in
-            self?.performRequest()
+            DispatchQueue.global().async {
+                self?.performRequest()
+            }
         }
     }
 

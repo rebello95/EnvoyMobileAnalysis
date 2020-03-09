@@ -7,6 +7,12 @@ private let kRequestScheme = "https"
 final class ViewController: UIViewController {
     private var requestCount = 0
     private var timer: Timer?
+    private lazy var session: URLSession = {
+        let configuration = URLSessionConfiguration.default
+        configuration.urlCache = nil
+        configuration.timeoutIntervalForRequest = 15
+        return URLSession(configuration: configuration)
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +28,9 @@ final class ViewController: UIViewController {
 
     private func startRequests() {
         self.timer = .scheduledTimer(withTimeInterval: 0.2, repeats: true) { [weak self] _ in
-            self?.performRequest()
+            DispatchQueue.global().async {
+                self?.performRequest()
+            }
         }
     }
 
@@ -30,17 +38,12 @@ final class ViewController: UIViewController {
         self.requestCount += 1
         let requestNumber = self.requestCount
 
-        let configuration = URLSessionConfiguration.default
-        configuration.urlCache = nil
-        configuration.timeoutIntervalForRequest = 15
-        let session = URLSession(configuration: configuration)
-
         let url = URL(string: "\(kRequestScheme)://\(kRequestAuthority)\(kRequestPath)")!
         print("Starting request to '\(url.path)'")
 
-        session.dataTask(with: url) { data, response, error in
+        self.session.dataTask(with: url) { _, response, error in
             if let statusCode = (response as? HTTPURLResponse)?.statusCode {
-                print("[\(requestNumber)] response (\(statusCode)) with \(data?.count ?? 0) bytes")
+                print("[\(requestNumber)] response (\(statusCode))")
             } else if let error = error {
                 print("[\(requestNumber)] error: \(error)")
             }
