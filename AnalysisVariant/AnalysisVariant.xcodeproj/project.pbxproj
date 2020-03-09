@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -74,7 +74,6 @@
 				0445AC10BAB42143723E1292 /* Pods-AnalysisVariant.debug.xcconfig */,
 				9B08C229FACF2DC718B76474 /* Pods-AnalysisVariant.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -339,12 +338,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8F2X7PXQ8Z;
 				INFOPLIST_FILE = AnalysisVariant/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.michaelrebello.AnalysisVariant;
+				PRODUCT_BUNDLE_IDENTIFIER = com.michaelrebello.EnvoyMobileAnalysisVariant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -357,12 +357,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8F2X7PXQ8Z;
 				INFOPLIST_FILE = AnalysisVariant/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.michaelrebello.AnalysisVariant;
+				PRODUCT_BUNDLE_IDENTIFIER = com.michaelrebello.EnvoyMobileAnalysisVariant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -25,7 +25,7 @@ final class ViewController: UIViewController {
     // MARK: - Requests
 
     private func startRequests() {
-        self.timer = .scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] _ in
+        self.timer = .scheduledTimer(withTimeInterval: 0.2, repeats: true) { [weak self] _ in
             self?.performRequest()
         }
     }

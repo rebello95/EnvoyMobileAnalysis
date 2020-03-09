@@ -1,5 +1,5 @@
 PODS:
-  - EnvoyMobile (0.2.3.03022020)
+  - EnvoyMobile (0.2.3.03052020)
 
 DEPENDENCIES:
   - EnvoyMobile
@@ -9,7 +9,7 @@ SPEC REPOS:
     - EnvoyMobile
 
 SPEC CHECKSUMS:
-  EnvoyMobile: 9f06d1575a4ad236a410af98b5cfdb86e78ef6c9
+  EnvoyMobile: 9f4ff04eed4528f1c7c6e06a14d0ab191b467d03
 
 PODFILE CHECKSUM: a19d2db3b82393eadc050fe1a3e115f2ff4e891d
 
